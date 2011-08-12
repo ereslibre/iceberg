@@ -33,7 +33,7 @@ function fetchNextStep()
         selectedRoutersPass = new Array();
         var selected = $$('div[selected="true"]');
         if (!selected.length) {
-            $('warning').replace('<div id="warning" style="display: none;">Please, select one router at least</div>');
+            $('warning').replace('<div id="warning" style="display: none;">Please, select at least one router</div>');
             $('warning').appear({duration:0.5});
             return;
         }
