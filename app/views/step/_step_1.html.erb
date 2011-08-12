@@ -1,0 +1,39 @@
+<div class="title">
+  1. Select Routers
+</div>
+<div id="wizardpage">
+  <div class="list">
+    <% if SHOW_ROUTER_LIST %>
+      <% Router.all.each { |router| %>
+        <div id="<%= router.id %>" class="router" onclick="toggleState('<%= router.id %>');" pass="<%= (router.password != nil) and not router.password.empty? %>" selected="false">
+          <div class="routername">
+            <%= router.name %>
+          </div>
+          <div class="routercomment">
+            <%= router.comment ? router.comment : "No comment"  %>
+          </div>
+        </div>
+        <div id="router<%= router.id %>pass" class="routerpass" style="display: none;">
+          <label for="router<%= router.id %>password">Password:</label>
+          <input type="password" id="router<%= router.id %>password" name="router<%= router.id %>password" value=""/>
+        </div>
+      <% } %>
+    <% else %>
+        <% router = Router.find DEFAULT_ROUTER_ID %>
+        <div id="<%= router.id %>" class="router" pass="<%= (router.password != nil) and not router.password.empty? %>" selected="false">
+          <div class="routername">
+            <%= router.name %>
+          </div>
+          <div class="routercomment">
+            <%= router.comment ? router.comment : "No comment"  %>
+          </div>
+        </div>
+        <div id="router<%= router.id %>pass" class="routerpass" style="display: none;">
+          <label for="router<%= router.id %>password">Password: </label>
+          <input type="password" id="router<%= router.id %>password" name="router<%= router.id %>password" value=""/>
+        </div>
+        <script>(function() { toggleState("<%= router.id %>"); }).delay(0.1);</script>
+    <% end %>
+  </div>
+</div>
+<script>showCurrentStep();</script>

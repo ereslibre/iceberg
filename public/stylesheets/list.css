@@ -1,0 +1,48 @@
+div.list {
+    margin: 0 auto;
+    text-align: center;
+    width: 500px;
+}
+
+div.router {
+    width: 400px;
+    text-align: justify;
+    cursor: pointer;
+    margin-bottom: 30px;
+    padding: 10px;
+    padding-left: 80px;
+    border: none 0px #000000;
+    -moz-border-radius-topleft: 29px;
+    -moz-border-radius-topright: 29px;
+    -moz-border-radius-bottomleft: 29px;
+    -moz-border-radius-bottomright: 29px;
+    -webkit-border-top-left-radius: 29px;
+    -webkit-border-top-right-radius: 29px;
+    -webkit-border-bottom-left-radius: 29px;
+    -webkit-border-bottom-right-radius: 29px;
+    border-top-left-radius: 29px;
+    border-top-right-radius: 29px;
+    border-bottom-left-radius: 29px;
+    border-bottom-right-radius: 29px;
+    background: -webkit-gradient(linear, 38% 0%, 38% 100%, from(#FFFFFF), to(#DDDDDD));
+    background: -moz-linear-gradient(center 0, rgb(255,255,255) 50%, rgb(221,221,221) 100%);
+    box-shadow: 5px 5px 25px #CCC;
+    -moz-box-shadow: 5px 5px 25px #CCC;
+    -webkit-box-shadow: 5px 5px 25px #CCC;
+}
+
+div.router[selected="true"] {
+    background-image: url('/images/selected.png'), -webkit-gradient(linear, 38% 0%, 38% 100%, from(#DDDDDD), to(#FFFFFF));
+    background-image: url('/images/selected.png'), -moz-linear-gradient(center 0, rgb(221,221,221) 50%, rgb(255,255,255) 100%);
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 5px 15px 0px rgba(0, 0, 0, 0.4), 5px 5px 25px #CCC;
+    -moz-box-shadow: inset 0px 5px 15px 0px rgba(0, 0, 0, 0.4), 5px 5px 25px #CCC;
+    -webkit-box-shadow: inset 0px 5px 15px 0px rgba(0, 0, 0, 0.4), 5px 5px 25px #CCC;
+}
+
+div.routername {
+}
+
+div.routercomment {
+    padding-left: 1em;
+}

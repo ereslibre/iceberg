@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'net/telnet'
+pop = Net::Telnet::new("Host" => "128.223.51.103",
+                       "Port" => 23,
+                       "Telnetmode" => false,
+                       "Prompt" => /^route-views\>/n)
+pop.cmd("rviews") { |c| print c }
+pop.cmd("terminal length 0") { |c| print c }
+pop.cmd("show interfaces") { |c| print c }

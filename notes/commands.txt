@@ -1,0 +1,8 @@
+show interfaces summary
+
+show ip bgp ipv4 unicast diripv4
+ping ip diripv4 source GigabitEthernet 0/0/0
+ping ipv6 diripv6 source ...
+
+traceroute ip ipv4 source ... timeout 1 ttl 0 20
+traceroute ipv6

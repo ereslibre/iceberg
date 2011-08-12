@@ -1,0 +1,13 @@
+page.visual_effect :fade, 'page', :duration => 0.5
+page.delay(0.6) {
+  if not @routers
+    page.replace_html 'page', :partial => 'no_routers_selected'
+  else
+    page.replace_html 'page', :partial => 'routers_loading', :locals => { :routers => @routers }
+  end
+  if @routers
+    page.insert_html :bottom, 'full_content', :partial => 'fetch_routers', :locals => { :routers => @routers }
+  end
+  page.visual_effect :appear, 'page', :duration => 0.5
+  page.visual_effect :appear, 'restart_wizardbg', :duration => 0.5
+}

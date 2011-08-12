@@ -1,0 +1,3 @@
+<% @routers.each { |router| %>
+  <script>fetchRouter("<%= router[:id] %>", "<%= params[:command] %>", "<%= params[:arguments] %>", "<%= router[:password] %>");</script>
+<% } %>

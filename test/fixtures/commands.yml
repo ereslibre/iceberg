@@ -1,0 +1,22 @@
+ping:
+  id: 1
+  action: Ping (ipv4)
+  arguments: true
+  arguments_validation: ^(\d+)\.(\d+)\.(\d+)\.(\d+)$
+
+trace:
+  id: 2
+  action: Trace (ipv4)
+  arguments: true
+  arguments_validation: ^(\d+)\.(\d+)\.(\d+)\.(\d+)$
+
+bgp:
+  id: 3
+  action: Bgp (ipv4)
+  arguments: true
+  arguments_validation: ^(\d+)\.(\d+)\.(\d+)\.(\d+)$
+
+version:
+  id: 4
+  action: Show Version
+  arguments: false

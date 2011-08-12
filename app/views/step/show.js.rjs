@@ -1,0 +1,13 @@
+page.visual_effect :fade, 'page', :duration => 0.5
+page.delay(0.6) {
+  if @step_id >= 1 and @step_id <= 3
+    page.replace_html 'page', :partial => "step_#{@step_id}"
+    if @step_id == 1
+      page.replace_html 'steps', :partial => 'show_steps'
+      page.visual_effect :appear, 'steps', :duration => 0.5
+    end
+  else
+    page.replace_html 'page', :partial => 'invalid_page'
+  end
+  page.visual_effect :appear, 'page', :duration => 0.5
+}

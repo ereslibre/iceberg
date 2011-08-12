@@ -1,0 +1,19 @@
+ping_model1:
+  command_id: 1
+  model_id: 1
+  command_line: ping %a%
+
+trace_model1:
+  command_id: 2
+  model_id: 1
+  command_line: trace %a%
+
+bgp_model1:
+  command_id: 3
+  model_id: 1
+  command_line: show ip bgp ipv4 unicast %a%
+
+version_model1:
+  command_id: 4
+  model_id: 1
+  command_line: show version

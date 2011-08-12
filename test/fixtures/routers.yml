@@ -1,0 +1,20 @@
+oregon_ix:
+  id: 1
+  name: Oregon-IX
+  comment: Route Views Oregon-IX
+  model_id: 1
+  server: route-views.oregon-ix.net
+  port: 22
+  router_username: rviews
+  max_sessions: 5
+
+oregon_ix_pp:
+  id: 2
+  name: Oregon-IX Password Protected
+  comment: Route Views Oregon-IX
+  password: oregonix
+  model_id: 1
+  server: route-views.oregon-ix.net
+  port: 22
+  router_username: rviews
+  max_sessions: 5

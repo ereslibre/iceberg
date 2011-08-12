@@ -1,0 +1,18 @@
+== Introduction
+
+Iceberg is a complete looking glass solution.
+
+Written in Ruby on Rails; all you need to make it work is a web server
+(nginx, Apache...) and passenger.
+
+== Installation
+
+Yet to come...
+
+== Configuration
+
+Yet to come...
+
+== Deployment
+
+Yet to come...

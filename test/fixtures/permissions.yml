@@ -1,0 +1,31 @@
+router1_ping:
+  router_id: 1
+  command_id: 1
+
+router1_trace:
+  router_id: 1
+  command_id: 2
+
+router1_bgp:
+  router_id: 1
+  command_id: 3
+
+router1_version:
+  router_id: 1
+  command_id: 4
+
+router2_ping:
+  router_id: 2
+  command_id: 1
+
+router2_trace:
+  router_id: 2
+  command_id: 2
+
+router2_bgp:
+  router_id: 2
+  command_id: 3
+
+router2_version:
+  router_id: 2
+  command_id: 4

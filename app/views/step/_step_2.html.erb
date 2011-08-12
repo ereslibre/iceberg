@@ -1,0 +1,22 @@
+<div class="title">
+  2. Select Action and Set Arguments
+</div>
+<div id="wizardpage">
+  <div class="subtitle">
+    2.1. Select Action
+    <div class="wizardsection">
+      <% Command.all.each { |command|  %>
+        <% first = Command.first; is_first = (command == first) %>
+        <input type="radio" name="action" id="<%= command.id %>"
+               value="<%= command.arguments %>" onClick="updateArguments()" <%= is_first ? 'checked="checked"' : ''  %>/><%= command.action %><br/>
+      <% } %>
+    </div>
+  </div>
+  <div id="arguments_block" class="subtitle" style="display: none;">
+    2.2. Set Arguments
+    <div class="wizardsection">
+      <input type="text" id="arguments"/>
+    </div>
+  </div>
+</div>
+<script>(function() { updateArguments(); }).delay(0.1); showCurrentStep();</script>

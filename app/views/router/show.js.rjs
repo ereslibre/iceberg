@@ -1,0 +1,29 @@
+page.visual_effect :fade, "router#{@router_id}", :duration => 0.5
+page.visual_effect :fade, "router#{@router_id}icon", :duration => 0.5
+page.delay(0.6) {
+  partial = nil
+  partial_icon = 'error_icon'
+  case @res[:status]
+    when SUCCESS then
+      partial = 'result'
+      partial_icon = 'success_icon'
+    when INCORRECT_PASSWORD
+      partial = 'incorrect_password'
+    when PERMISSION_ERROR
+      partial = 'permission_error'
+    when SSH_ERROR
+      partial = 'ssh_error'
+    when MISSING_COMMAND
+      partial = 'missing_command'
+    when ROUTER_OVERLOADED
+      partial = 'router_overloaded'
+    when INVALID_ROUTER
+      partial = 'invalid_router'
+    when INVALID_ARGUMENTS
+      partial = 'invalid_arguments'
+  end
+  page.replace_html "router#{@router_id}", :partial => partial
+  page.replace_html "router#{@router_id}icon", :partial => partial_icon
+  page.visual_effect :appear, "router#{@router_id}", :duration => 0.5
+  page.visual_effect :appear, "router#{@router_id}icon", :duration => 0.5
+}
