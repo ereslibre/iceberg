@@ -185,19 +185,17 @@ div.next_overlay2 {
   width: 600px;
   height: 10px;
   padding: 20px;
-  background: #fff;
+  background: #FFF380;
   -webkit-border-top-left-radius: 20px;
   -webkit-border-top-right-radius: 20px;
   -moz-border-radius-topleft: 20px;
   -moz-border-radius-topright: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   background-image: url('/images/blocker.png');
   background-repeat: no-repeat;
   background-position: right center;
-  -moz-box-shadow: 0px 0px 16px #ccc;
-  -webkit-box-shadow: 0px 0px 16px #ccc;
-  box-shadow: 0px 0px 16px #ccc;
 }
 
 div p {
