@@ -195,7 +195,7 @@ div.next_overlay2 {
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   background-image: url('/images/blocker.png');
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 500px -37px;
 }
 
 div p {
