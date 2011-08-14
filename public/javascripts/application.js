@@ -40,13 +40,20 @@ function fetchNextStep()
         for (var x = 0; x < selected.length; ++x) {
             selectedRouters[x] = selected[x].getAttribute('id');
             var selectedRouterPass_ = 'router' + selectedRouters[x] + 'password';
-            selectedRoutersPass[x] = $(selectedRouterPass_).getValue();
+            var has_pass = (selected[x].getAttribute('pass') === "true");
+            var passValue = $(selectedRouterPass_).getValue();
+            if (has_pass && !passValue) {
+                $('warning').replace('<div id="warning" style="display: none;">Please, provide a password for all protected routers</div>');
+                $('warning').appear({duration:0.5});
+                return;
+            }
+            selectedRoutersPass[x] = passValue;
         }
     } else if (currentStep == 3) {
         command = $$('input:checked[type="radio"][name="action"]').pluck('id');
         commandArgs = $('arguments').getValue();
-        var has_args = $$('input:checked[type="radio"][name="action"]').pluck('value');
-        if (has_args == "true" && !commandArgs) {
+        var has_args = ($$('input:checked[type="radio"][name="action"]').pluck('value') === "true");
+        if (has_args && !commandArgs) {
             $('warning').replace('<div id="warning" style="display: none;">The selected action requires an argument</div>');
             $('warning').appear({duration:0.5});
             return;            
