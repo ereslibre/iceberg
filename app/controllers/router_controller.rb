@@ -56,7 +56,7 @@ class RouterController < ApplicationController
                                     @router.router_password,
                                     adapted_command)
                 if @res
-                  @res = { :status => SUCCESS, :result => @res.gsub!(/\r\n?/, "\n").gsub!(/^( +)/){ |m| m.gsub(' ', '&nbsp;') } }
+                  @res = { :status => SUCCESS, :result => @res.gsub!(/\r\n?/, "\n").gsub!(/^( *)/){ |m| m.gsub(' ', '&nbsp;') } }
                 else
                   @res = { :status => SSH_ERROR }
                 end
