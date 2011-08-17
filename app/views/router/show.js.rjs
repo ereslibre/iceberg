@@ -1,6 +1,6 @@
 page.visual_effect :fade, "router#{@router_id}", :duration => 0.5
-page.visual_effect :fade, "router#{@router_id}icon", :duration => 0.5
 page.delay(0.6) {
+  page.hide "router#{@router_id}"
   partial = nil
   partial_icon = 'error_icon'
   case @res[:status]
